@@ -4,9 +4,12 @@
   "description": "ESAME ING SOFT 2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node ./index.js"
   },
   "author": "Lorenzo Gasperotti",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.0.6"
+  }
 }
