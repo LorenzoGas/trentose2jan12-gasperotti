@@ -16,10 +16,15 @@ router.get('/', function (req, res) {
 router.route('/getArea')
     .get(function (req, res) {
         console.log('GET');
-        //todo
+        var sides = [parseInt(req.query.side1), parseInt(req.query.side2)];
+        var area = getArea(sides);
+        console.log('area= '+area);
+        if (area == -1)
+            res.status=400;
+        res.json({rect_area: area});
     })
 
-app.use('/api', router);
+app.use('', router);
 
 app.listen(port, function () {
     console.log('App listening on port '+ port);
